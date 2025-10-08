@@ -29,11 +29,12 @@ interface VolunteerInfoProps {
 
 const VolunteerSteps = [
   { title: "確認資訊", text: "查詢災區天氣、交通、人力需求等，評估自身情況" },
-  { title: "加入志工", text: "加入個人志工／國際志工說明？" },
+  { title: "加入志工", text: "加入個人志工，如 Line 社群、本平台媒合、或至光復車站前接受調度" },
   { title: "行前準備", text: "確認交通資訊、裝備（下滑有裝備清單喔）" },
-  { title: "出發光復", text: "切勿勉強赴災！最好回程車票、連絡嚮導" },
+  { title: "出發光復", text: "切勿勉強赴災！建議訂好回程車票、聯絡嚮導" },
   { title: "進入災區", text: "抵達災區後，尋找聯絡人，帶你抵達受困區的地點" },
-  { title: "替換衣物再離開", text: "至臨時救衣點，避免染病、也不造成他人困擾" },
+  { title: "若身體不適", text: "及早至就醫點就醫，災區內醫治不宜拖延至緊急時刻！"},
+  { title: "替換衣物", text: "返家前，將髒污衣物裝進垃圾袋中隔離丟棄，替換成乾淨衣物離開災區" },
 ];
 
 export default function VolunteerInfo({
@@ -98,13 +99,13 @@ export default function VolunteerInfo({
             </div>
 
             <div className="relative">
-              <div className="absolute left-[7px] top-2 bottom-0 w-[2px] h-[88%] bg-[var(--orange-point)]"></div>
+              <div className="absolute left-[7px] top-2 bottom-0 w-[2px] h-[88%] bg-[var(--primary-point)]"></div>
 
               {VolunteerSteps.map((step, index) => (
                 <div key={index} className="relative flex items-start mb-5">
-                  <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-[var(--orange-point)] border border-[var(--orange-point)]"></div>
+                  <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-[var(--primary-point)] border border-[var(--primary-point)]"></div>
                   <div className="flex flex-row gap-2 ml-6">
-                    <div className="min-w-[80px] size-fit bg-[var(--light-orange)] text[var(--text-black)] px-3 py-1 rounded text-sm font-medium">
+                    <div className="min-w-[80px] size-fit bg-[var(--light-primary)] text[var(--text-black)] px-3 py-1 rounded text-sm font-medium">
                       <span>{step.title}</span>
                     </div>
                     <p className="text-[var(--text-black)] text-sm mt-1 leading-snug">
@@ -122,37 +123,37 @@ export default function VolunteerInfo({
                   <StepNumber number={2} />
                   <h3 className="font-bold text-xl">裝備清單</h3>
                 </div>
-                <div className="bg-[var(--gray-baclground)] rounded-lg p-4  space-y-6">
+                <div className="bg-[var(--gray-background)] rounded-lg p-4  space-y-6">
                   <ClothingProtectionChecklist
                     checkedItems={checkedItems}
                     onCheckChange={handleCheckboxChange}
                   />
                 </div>
-                <div className="bg-[var(--gray-baclground)] rounded-lg p-4 space-y-6">
+                <div className="bg-[var(--gray-background)] rounded-lg p-4 space-y-6">
                   <FootwearHandsChecklist
                     checkedItems={checkedItems}
                     onCheckChange={handleCheckboxChange}
                   />
                 </div>
-                <div className="bg-[var(--gray-baclground)] rounded-lg p-4 space-y-6">
+                <div className="bg-[var(--gray-background)] rounded-lg p-4 space-y-6">
                   <MedicalItemsChecklist
                     checkedItems={checkedItems}
                     onCheckChange={handleCheckboxChange}
                   />
                 </div>
-                <div className="bg-[var(--gray-baclground)] rounded-lg p-4 space-y-6">
+                <div className="bg-[var(--gray-background)] rounded-lg p-4 space-y-6">
                   <FoodSuppliesChecklist
                     checkedItems={checkedItems}
                     onCheckChange={handleCheckboxChange}
                   />
                 </div>
-                <div className="bg-[var(--gray-baclground)] rounded-lg p-4 space-y-6">
+                <div className="bg-[var(--gray-background)] rounded-lg p-4 space-y-6">
                   <DisasterReliefToolsChecklist
                     checkedItems={checkedItems}
                     onCheckChange={handleCheckboxChange}
                   />
                 </div>
-                <div className="bg-[var(--gray-baclground)] rounded-lg p-4 space-y-6">
+                <div className="bg-[var(--gray-background)] rounded-lg p-4 space-y-6">
                   <OtherEssentialChecklist
                     checkedItems={checkedItems}
                     onCheckChange={handleCheckboxChange}
@@ -171,7 +172,7 @@ export default function VolunteerInfo({
                 別上志工專才辨識證，讓大家一眼就能快速辨識你的專業能力，立馬派遣工作，成為災區即戰力！
               </div>
               <a
-                href="https://drive.google.com/drive/folders/15D92UyiEKYKZInl1l0IAbFeKDOQRSfj1"
+                href="https://drive.google.com/drive/folders/1B9y7Rl56xpG0vjLrV37h0CqqUNrLHr_d?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-block text-white bg-[var(--primary)] hover:bg-[#e06d00] rounded-[12px] px-8 py-4 font-medium transition-colors text-center"
@@ -230,7 +231,7 @@ export default function VolunteerInfo({
                 </p>
 
                 <div className="space-y-4">
-                  <div className="border-b border-gray-200 pb-4">
+                  <div className="border-b border-[var(--gray-3)] pb-4">
                     <h4 className="font-bold text-lg mb-2 text-[var(--text-black)]">
                       安全第一
                     </h4>
@@ -239,16 +240,16 @@ export default function VolunteerInfo({
                     </p>
                   </div>
 
-                  <div className="border-b border-gray-200 pb-4">
+                  <div className="border-b border-[var(--gray-3)] pb-4">
                     <h4 className="font-bold text-lg mb-2 text-[var(--text-black)]">
                       結伴同行
                     </h4>
-                    <p className="text-[var(--gray-2)] dark:text-gray-400 leading-relaxed">
+                    <p className="text-[var(--gray-2)] leading-relaxed">
                       避免單獨行動，與夥伴結伴，彼此照應更安全。
                     </p>
                   </div>
 
-                  <div className="border-b border-gray-200 pb-4">
+                  <div className="border-b border-[var(--gray-3)] pb-4">
                     <h4 className="font-bold text-lg mb-2 text-[var(--text-black)]">
                       保持聯繫
                     </h4>
@@ -257,7 +258,7 @@ export default function VolunteerInfo({
                     </p>
                   </div>
 
-                  <div className="border-b border-gray-200 pb-4">
+                  <div className="border-b border-[var(--gray-3)] pb-4">
                     <h4 className="font-bold text-lg mb-2 text-[var(--text-black)]">
                       補給防護
                     </h4>
@@ -266,7 +267,7 @@ export default function VolunteerInfo({
                     </p>
                   </div>
 
-                  <div className="border-b border-gray-200 pb-4">
+                  <div className="border-b border-[var(--gray-3)] pb-4">
                     <h4 className="font-bold text-lg mb-2 text-[var(--text-black)]">
                       身心調適
                     </h4>
@@ -366,7 +367,7 @@ export default function VolunteerInfo({
             {selectedTransportMode === "大眾運輸" && (
               <>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 dark:text-white">
+                  <h3 className="text-xl font-bold mb-3">
                     一、如何到花蓮：台鐵
                   </h3>
                   <a
@@ -379,11 +380,19 @@ export default function VolunteerInfo({
                   </a>
                   <a
                     href="https://www.railway.gov.tw/tra-tip-web/tip/tip001/tip121/query"
-                    className="flex text-[var(--gray)] underline text-sm"
+                    className="flex text-[var(--gray)] underline text-sm mb-2"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     訂票來這邊
+                  </a>
+                  <a
+                    href="https://gobus.moushih.com/auth/login"
+                    className="flex text-[var(--gray)] underline text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    遊覽車媒合去Gobus
                   </a>
                 </div>
 
@@ -393,7 +402,7 @@ export default function VolunteerInfo({
                   </h3>
 
                   <div>
-                    <p className="rounded-lg bg-[var(--light-orange)] text-center text-md mb-2">
+                    <p className="rounded-lg bg-[var(--light-primary)] text-center text-md mb-2">
                       交通部觀光署接駁車
                     </p>
                     <p className="text-center text-sm text-[var(--text-black)]  mb-2">
@@ -404,7 +413,7 @@ export default function VolunteerInfo({
                       每小時一班
                     </p>
                     <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
+                      <div className="bg-white rounded-lg overflow-hidden border border-[var(--gray-3)]">
                         <Image
                           src={getAssetPath("/station_1.svg")}
                           alt="花蓮車站 A"
@@ -413,7 +422,7 @@ export default function VolunteerInfo({
                           className="w-full h-auto"
                         />
                       </div>
-                      <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
+                      <div className="bg-white rounded-lg overflow-hidden border border-[var(--gray-3)]">
                         <Image
                           src={getAssetPath("/station_2.svg")}
                           alt="花蓮車站 B"
@@ -423,7 +432,7 @@ export default function VolunteerInfo({
                         />
                       </div>
                     </div>
-                    <div className="text-sm text-gray-700 space-y-2 mb-4">
+                    <div className="text-sm text-[var(--gray)] space-y-2 mb-4">
                       <p>
                         ※專車路線往返新城｜花蓮｜吉安｜壽豐｜玉里等站與志工住宿地點。
                       </p>
@@ -448,7 +457,7 @@ export default function VolunteerInfo({
                   </div>
 
                   <div className="text-[var(--text-black)]">
-                    <p className="rounded-lg bg-[var(--light-orange)] text-center text-md mb-2">
+                    <p className="rounded-lg bg-[var(--light-primary)] text-center text-md mb-2">
                       尋找小蜜蜂接駁
                     </p>
                     <p>
@@ -459,7 +468,7 @@ export default function VolunteerInfo({
                     </p>
                   </div>
 
-                  <div className="bg-[var(--gray-baclground)] rounded-lg p-6 space-y-6">
+                  <div className="bg-[var(--gray-background)] rounded-lg p-6 space-y-6">
                     <div className="flex gap-2">
                       <div className="w-70 font-bold">
                         車站前小蜜蜂臨時泊車點
@@ -470,7 +479,7 @@ export default function VolunteerInfo({
                         出車站後，跟著現場的招牌指引就能找到！救災需求千變萬化，泊車點也跟著滾動調整，因此無確切地址。
                       </p>
                     </div>
-                    <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
+                    <div className="bg-white rounded-lg overflow-hidden border border-[var(--gray-3)]">
                       <Image
                         src={getAssetPath("/sign.svg")}
                         alt="sign"
@@ -490,7 +499,7 @@ export default function VolunteerInfo({
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          加入 Line@
+                          加入 LINE 社群
                         </a>
                       </div>
                       <p className="text-[var(--gray-2)]">
@@ -507,7 +516,7 @@ export default function VolunteerInfo({
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          加入 Line@
+                          加入 LINE 社群
                         </a>
                       </div>
                       <p className="text-[var(--gray-2)]">
@@ -524,7 +533,7 @@ export default function VolunteerInfo({
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          加入 Line@
+                          加入 LINE 社群
                         </a>
                       </div>
                       <p className="text-[var(--gray-2)]">
@@ -541,7 +550,7 @@ export default function VolunteerInfo({
                           rel="noopener noreferrer"
                           href="https://line.me/ti/g/kT5bXAtJ4U"
                         >
-                          加入 Line@
+                          加入 LINE 社群
                         </a>
                       </div>
                       <p className="text-[var(--gray-2)]">
@@ -556,19 +565,19 @@ export default function VolunteerInfo({
             {selectedTransportMode === "共乘資訊" && (
               <div className="space-y-4">
                 <div>
-                  <div className="bg-[var(--gray-baclground)] rounded-lg p-5">
+                  <div className="bg-[var(--gray-background)] rounded-lg p-5">
                     <h2 className="text-xl font-bold text-center mb-3">
                       請勿開車進入光復
                     </h2>
                     <div className="flex gap-4">
                       <div className="flex flex-col w-1/2">
-                        <div className="text-center bg-[#F9E6C0] rounded py-1 px-2 font-bold mb-2">
+                        <div className="text-center bg-[var(--light-primary)] rounded py-1 px-2 font-bold mb-2">
                           南下路線
                         </div>
                         <div>請停在花蓮火車站，改搭區間車往光復。</div>
                       </div>
                       <div className="flex flex-col w-1/2">
-                        <div className="text-center bg-[#F9E6C0] rounded py-1 px-2 font-bold mb-2">
+                        <div className="text-center bg-[var(--light-primary)] rounded py-1 px-2 font-bold mb-2">
                           北上路線
                         </div>
                         <div>請停在鳳林火車站，改搭區間車往光復。</div>
@@ -588,7 +597,7 @@ export default function VolunteerInfo({
                       資料來源：2025/09/26 花蓮縣政府公告
                     </div>
                   </div>
-                  <p className="rounded-lg bg-[var(--light-orange)] text-center text-md mb-2">
+                  <p className="rounded-lg bg-[var(--light-primary)] text-center text-md mb-2">
                     各區共乘資訊
                   </p>
                   <p className="m-2">
@@ -628,7 +637,7 @@ export default function VolunteerInfo({
         {selectedCategory === "住宿資訊" && (
           <div className="p-6 bg-gray-50 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">住宿資訊</h2>
-            <p className="text-gray-600">住宿資訊的內容將顯示在這裡</p>
+            <p className="text-[var(--gray)]">住宿資訊的內容將顯示在這裡</p>
           </div>
         )}
       </div>

@@ -18,6 +18,12 @@ export default function AboutUs() {
         "Abby Su",
         "Yi",
         "Stephanie Sung",
+        "IKEA",
+        "Randy",
+        "Sylvia Kuo",
+        "Jeanlu",
+        "ZhuMon",
+        "Ava Tu",
         "Sam",
         "JessZhong",
         "Pink Li",
@@ -27,17 +33,24 @@ export default function AboutUs() {
         "陳亭妏",
         "Wenny Chang",
         "謝靖雯",
+        "Sucre Lin 林糖糖",
+        "jerry._.",
+        "cy.hsu",
+        "陳雅柔",
+        "BensonTW",
+        "Arey",
+        "Mizhon",
       ],
     },
     {
       id: 2,
       groupName: "宣傳組",
-      personNames: ["于涵", "魏綺萱", "FANG JOU", "Sunny Yang"],
+      personNames: ["于涵", "魏綺萱", "ヨウヨウ", "FANG JOU", "Sunny Yang"],
     },
     {
       id: 3,
       groupName: "地圖組",
-      personNames: ["Zack", "張容瑜", "Zeli", "Fannie", "雅"],
+      personNames: ["Zack", "張容瑜", "Zeli", "Fannie", "雅", "曾德容(鷹)"],
     },
     {
       id: 4,
@@ -47,9 +60,11 @@ export default function AboutUs() {
         "葉彥均 Andy",
         "Pichu",
         "瑜瑜",
+        "渺渺",
         "Sunny Yang",
         "JessZhong",
         "Yuling",
+        "Sucre Lin 林糖糖",
       ],
     },
     {
@@ -88,10 +103,10 @@ export default function AboutUs() {
   return (
     <div className="space-y-12 mb-[22px]">
       <section className="space-y-[22px]">
-        <header className="h-[38px] py-2 px-2 text-[28px] font-medium text-[#1E1E1E] text-center">
+        <header className="h-[38px] py-2 px-2 text-[28px] font-medium text-[var(--text-black)] text-center">
           關於我們
         </header>
-        <div className="text-[16px] leading-[20px] text-[#1E1E1E]">
+        <div className="text-[16px] leading-[20px] text-[var(--text-black)]">
           <p className="mb-4">
             許多人能親自前往災區成為志工，
             而我們，是一群無法親臨現場，卻同樣想為這片土地盡一份力的「遠端志工」、「鍵盤志工」。
@@ -129,10 +144,10 @@ export default function AboutUs() {
       </section>
 
       <section className="space-y-[22px]">
-        <header className="h-[38px] py-2 px-2 text-[28px] font-medium text-[#1E1E1E] text-center">
+        <header className="h-[38px] py-2 px-2 text-[28px] font-medium text-[var(--text-black)] text-center">
           團隊成員
         </header>
-        <div className="text-[16px] leading-[20px] text-[#1E1E1E]">
+        <div className="text-[16px] leading-[20px] text-[var(--text-black)]">
           感謝所有為了讓系統能全天運作、資訊不中斷而付出的每一位「接力超人」！
         </div>
 
